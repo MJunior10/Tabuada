@@ -1,0 +1,149 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg, #ff9ff3, #feca57, #48dbfb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   INPUT
+========================= */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 6px 0;
+    border-radius: 12px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: #ff4757;
+}
+
+/* =========================
+   GRID TABUADAS
+========================= */
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.botoes button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+}
+
+/* =========================
+   QUIZ INFO
+========================= */
+#pergunta {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+#vidas,
+#tempoPergunta {
+    font-size: 18px;
+}
+
+/* =========================
+   RESULTADO
+========================= */
+#resultadoFinal {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* =========================
+   PAINEL
+========================= */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    margin: 15px 0;
+}
+
+/* =========================
+   RESPONSIVIDADE EXTRA
+========================= */
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    #pergunta {
+        font-size: 20px;
+    }
+
+    .botoes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* =========================
+   HIDDEN
+========================= */
+.hidden {
+    display: none;
+}

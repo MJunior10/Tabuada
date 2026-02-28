@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Treino PRO</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<audio id="musica" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <h1>🌈 Super Treino 🌈</h1>
+
+    <!-- LOGIN -->
+    <div id="login">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button onclick="entrar()">Entrar</button>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu" class="hidden">
+        <h2 id="boasVindas"></h2>
+        <button onclick="mostrarTabuadas()">Treinar</button>
+        <button onclick="abrirPainel()">📊 Painel</button>
+        <button onclick="toggleMusica()">🎵 Ligar / Desligar Música</button>
+    </div>
+
+    <!-- SELEÇÃO TABUADA -->
+    <div id="selecao" class="hidden">
+        <h3>Escolha a tabuada:</h3>
+        <div class="botoes">
+            <button onclick="iniciar(1)">1</button>
+            <button onclick="iniciar(2)">2</button>
+            <button onclick="iniciar(3)">3</button>
+            <button onclick="iniciar(4)">4</button>
+            <button onclick="iniciar(5)">5</button>
+            <button onclick="iniciar(6)">6</button>
+            <button onclick="iniciar(7)">7</button>
+            <button onclick="iniciar(8)">8</button>
+            <button onclick="iniciar(9)">9</button>
+            <button onclick="iniciar(10)">10</button>
+        </div>
+    </div>
+
+    <!-- MEMORIZAÇÃO -->
+    <div id="estudo" class="hidden">
+        <h2 id="tituloTabuada"></h2>
+        <div id="contador"></div>
+        <div id="tabuada"></div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quiz" class="hidden">
+        <div>❤️ Vidas: <span id="vidas"></span></div>
+        <div>⏱️ Tempo: <span id="tempoPergunta"></span></div>
+        <div id="pergunta"></div>
+        <input type="number" id="resposta">
+        <button onclick="verificar()">Responder</button>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultadoFinal" class="hidden"></div>
+
+    <!-- PAINEL -->
+    <div id="painel" class="hidden">
+        <h2>📊 Evolução</h2>
+        <canvas id="grafico"></canvas>
+        <h3>🏅 Ranking</h3>
+        <div id="ranking"></div>
+        <button onclick="voltarMenu()">Voltar</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
